@@ -38,11 +38,14 @@ module.exports = () => {
             destination: path.join('assets', 'icons'),
           },
         ],
+        publicPath: '/',
+        fingerprints: false,
+        inject: true,
       }),
-      
+
       new InjectManifest({
         swSrc: './src-sw.js',
-        exclude: [/\.map$/,/_redirects/],
+        exclude: [/\.map$/, /_redirects/],
       }),
     ],
 
