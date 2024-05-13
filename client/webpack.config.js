@@ -16,10 +16,11 @@ module.exports = () => {
     output: {
       filename: '[name].bundle.js',
       path: path.resolve(__dirname, 'dist'),
+      publicPath: '/',
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: './src/index.html',
+        template: './index.html',
         chunks: ['main'],
       }),
 
@@ -33,18 +34,19 @@ module.exports = () => {
         display: 'standalone',
         icons: [
           {
-            src: path.resolve('src/assets/logo.png'),
+            src: path.resolve('./src/images/logo.png'),
             sizes: [96, 128, 192, 256, 384, 512],
-            destination: path.join('assets', 'icons'),
           },
         ],
-        publicPath: '/',
+
         fingerprints: false,
         inject: true,
+
       }),
 
       new InjectManifest({
         swSrc: './src-sw.js',
+        swDest: 'service-worker.js', // Specify the output file path
         exclude: [/\.map$/, /_redirects/],
       }),
     ],
