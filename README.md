@@ -5,7 +5,14 @@ J.A.T.E. (Just Another Text Editor) is a simple web-based editor program. It all
 
 ## Screenshots of My Application
 
+- ![Screenshot_1](./client/src/images/Screenshot_(1).png)
+- ![Screenshot_2](./client/src/images/Screenshot_(2).png)
+- ![Screenshot_3](./client/src/images/Screenshot_(3).png)
+- ![Screenshot_4](./client/src/images/Screenshot_(4).png)
+- ![Screenshot_5](./client/src/images/Screenshot_(5).png)
+
 ## Link to Deployed Application
+https://text-editor-sjua.onrender.com
 
 ## Table of Contents
 - [Features](#features)
